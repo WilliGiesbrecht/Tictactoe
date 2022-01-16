@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,81 @@
 
     <title>Tic tac toe</title>
 </head>
+
 <body>
-    
+    <div class="mainContainer">
+        <div class="endContainer">
+            <img class="gameOver d-none" id="gameOver" src="./img/gameover.png">
+        </div>
+        <div class="restartDiv">
+            <button id="restart-btn" class="restart-btn d-none" onclick="restart()">Restart</button>
+        </div>
+        <div class="title">
+            <h1>Tic tac toe</h1>
+        </div>
+        <div class="playerContainer">
+            <div class="playerDiv" id="player-one">
+                <img class="playerImg" src="./img/O.png"> Player 1
+            </div>
+            <div class="playerDiv playerInactive" id="player-two">
+                <img class="playerImg" src="./img/X.png"> Player 2
+            </div>
+        </div>
+            <div id="line-1" style="top: 505px;" class="end-line winnerLine"></div>
+            <div id="line-2" style="top: 642px;" class="end-line winnerLine"></div>
+            <div id="line-3" style="top: 782px;" class="end-line winnerLine"></div>
+            <div id="line-4" style="top: 645px; left: 659px;" class="end-line winnerLine make-vertical"></div>
+            <div id="line-5" style="top: 645px;" class="end-line winnerLine make-vertical"></div>
+            <div id="line-6" style="top: 645px; left: 927px;" class="end-line winnerLine make-vertical"></div>
+            <div id="line-7" style="top: 645px; transform: rotate(45deg) scale(0.0);" class="end-line winnerLine"></div>
+            <div id="line-8" style="top: 645px; transform: rotate(-45deg) scale(0.0);" class="end-line winnerLine"></div>
+        <table>
+            <tr>
+                <td onclick="fillShape(0)">
+                    <img id="circle-0" class="shape d-none" src="./img/O.png">
+                    <img id="cross-0" class="shape d-none" src="./img/X.png">
+                </td>
+                <td onclick="fillShape(1)" class="vertical">
+                    <img id="circle-1" class="shape d-none" src="./img/O.png">
+                    <img id="cross-1" class="shape d-none" src="./img/X.png">
+                </td>
+                <td onclick="fillShape(2)">
+                    <img id="circle-2" class="shape d-none" src="./img/O.png">
+                    <img id="cross-2" class="shape d-none" src="./img/X.png">
+                </td>
+            </tr>
+
+            <tr>
+                <td onclick="fillShape(3)" class="horizontal">
+                    <img id="circle-3" class="shape d-none" src="./img/O.png">
+                    <img id="cross-3" class="shape d-none" src="./img/X.png">
+                </td>
+                <td onclick="fillShape(4)" class="vertical horizontal">
+                    <img id="circle-4" class="shape d-none" src="./img/O.png">
+                    <img id="cross-4" class="shape d-none" src="./img/X.png">
+                </td>
+                <td onclick="fillShape(5)" class="horizontal">
+                    <img id="circle-5" class="shape d-none" src="./img/O.png">
+                    <img id="cross-5" class="shape d-none" src="./img/X.png">
+                </td>
+            </tr>
+
+            <tr>
+                <td onclick="fillShape(6)">
+                    <img id="circle-6" class="shape d-none" src="./img/O.png">
+                    <img id="cross-6" class="shape d-none" src="./img/X.png">
+                </td>
+                <td onclick="fillShape(7)" class="vertical">
+                    <img id="circle-7" class="shape d-none" src="./img/O.png">
+                    <img id="cross-7" class="shape d-none" src="./img/X.png">
+                </td>
+                <td onclick="fillShape(8)">
+                    <img id="circle-8" class="shape d-none" src="./img/O.png">
+                    <img id="cross-8" class="shape d-none" src="./img/X.png">
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
